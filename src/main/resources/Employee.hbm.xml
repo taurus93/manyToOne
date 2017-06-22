@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="entities.Employee" table="EMPLOYEE">
+    <class name="entities.Employee" table="employee">
         <meta attribute="class-description">
             This class contains the employee detail.
         </meta>
@@ -15,10 +15,10 @@
         <property name="last_name" column="last_name" type="string"/>
         <property name="salary" column="salary" type="int"/>
         <many-to-one name="address" column="address"
-                     class="entities.Address" not-null="true"/>
+                     class="entities.Address"/>
     </class>
 
-    <class name="entities.Address" table="ADDRESS">
+    <class name="entities.Address" table="address">
         <meta attribute="class-description">
             This class contains the address detail.
         </meta>

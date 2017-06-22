@@ -2,10 +2,10 @@ package entities;
 
 import javax.persistence.*;
 
-@Entity
-@Table
+//@Entity
+//@Table
 public class Address {
-  private Long id;
+  private int id;
   private String street_name;
   private String city_name;
   private String state_name;
@@ -20,18 +20,18 @@ public class Address {
     this.zipcode = zipcode;
   }
 
-  @Id
-  @Column
-  public Long getId() {
+//  @Id
+//  @Column
+  public int getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
-  @Basic
-  @Column
+//  @Basic
+//  @Column
   public String getStreet_name() {
     return street_name;
   }
@@ -40,8 +40,8 @@ public class Address {
     this.street_name = street_name;
   }
 
-  @Basic
-  @Column
+//  @Basic
+//  @Column
   public String getCity_name() {
     return city_name;
   }
@@ -50,8 +50,8 @@ public class Address {
     this.city_name = city_name;
   }
 
-  @Basic
-  @Column
+//  @Basic
+//  @Column
   public String getState_name() {
     return state_name;
   }
@@ -60,8 +60,8 @@ public class Address {
     this.state_name = state_name;
   }
 
-  @Basic
-  @Column
+//  @Basic
+//  @Column
   public String getZipcode() {
     return zipcode;
   }

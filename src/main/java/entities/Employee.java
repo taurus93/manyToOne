@@ -2,10 +2,10 @@ package entities;
 
 import javax.persistence.*;
 
-@Entity
-@Table
+//@Entity
+//@Table
 public class Employee {
-  private Long id;
+  private int id;
   private String first_name;
   private String last_name;
   private int salary;
@@ -20,18 +20,18 @@ public class Employee {
     this.address = address;
   }
 
-  @Id
-  @Column
-  public Long getId() {
+//  @Id
+//  @Column
+  public int getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
-  @Basic
-  @Column
+//  @Basic
+//  @Column
   public String getFirst_name() {
     return first_name;
   }
@@ -40,8 +40,8 @@ public class Employee {
     this.first_name = first_name;
   }
 
-  @Basic
-  @Column
+//  @Basic
+//  @Column
   public String getLast_name() {
     return last_name;
   }
@@ -50,8 +50,8 @@ public class Employee {
     this.last_name = last_name;
   }
 
-  @Basic
-  @Column
+//  @Basic
+//  @Column
   public int getSalary() {
     return salary;
   }
@@ -60,8 +60,8 @@ public class Employee {
     this.salary = salary;
   }
 
-  @ManyToOne
-  @Column
+//  @ManyToOne
+//  @Column
   public Address getAddress() {
     return address;
   }

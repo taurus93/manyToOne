@@ -27,6 +27,6 @@
         <property name="hibernate.generate_statistics">true</property>
 
         <!-- List of XML mapping files -->
-        <!--<mapping resource="Employee.hbm.xml"/>-->
+        <mapping resource="Employee.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
