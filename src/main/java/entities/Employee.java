@@ -69,4 +69,9 @@ public class Employee {
   public void  setAddress( Address address ) {
     this.address = address;
   }
+
+//  @Override
+  public String toString() {
+    return "first_name: " + this.first_name + ", "  + "salary: " + this.salary;
+  }
 }

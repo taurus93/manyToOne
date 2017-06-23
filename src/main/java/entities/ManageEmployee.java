@@ -2,11 +2,9 @@ package entities;
 
 import java.util.*;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 public class ManageEmployee {
     private static SessionFactory factory;
@@ -31,7 +29,7 @@ public class ManageEmployee {
       /* List down all the employees */
         ME.listEmployees();
 
-
+        ME.retriction();
     }
 
     /* Method to add an address record in the database */
@@ -72,7 +70,7 @@ public class ManageEmployee {
         }finally {
             session.close();
         }
-//        return employeeID;
+        //return employeeID;
     }
 
     /* Method to list all the employees detail */
@@ -101,6 +99,24 @@ public class ManageEmployee {
             e.printStackTrace();
         }finally {
             session.close();
+        }
+    }
+
+
+
+    public void retriction() {
+        Session session = factory.openSession();
+//       try {
+//            tx = session.beginTransaction();
+//            Criteria cr = session.createCriteria(Employee.class);
+            Query query = session.createNativeQuery("select * from employee where salary>3000", Employee.class);
+            List data = query.list();
+
+
+        for(Object object : data)
+        {
+
+            System.out.println(object.toString());
         }
     }
 }
