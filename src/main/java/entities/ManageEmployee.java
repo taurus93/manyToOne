@@ -109,8 +109,10 @@ public class ManageEmployee {
 //       try {
 //            tx = session.beginTransaction();
 //            Criteria cr = session.createCriteria(Employee.class);
-            Query query = session.createNativeQuery("select * from employee where salary>3000", Employee.class);
-            List data = query.list();
+        String hql = "select * FROM EMPLOYEE E WHERE E.id > :employee_id";
+        Query query = session.createNativeQuery(hql, Employee.class);
+        query.setParameter("employee_id",10);
+        List data = query.list();
 
 
         for(Object object : data)
